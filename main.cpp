@@ -29,7 +29,7 @@ protected:
    ClassArbol Jardin[NUM_ARBOLES];
    ClassEntrada Entrada1;
    //GLMmodel* objmodel_ptr;
-   AbrirMalla *miMalla;
+   AbrirMalla *mallas[2];
 
 
 
@@ -43,8 +43,16 @@ public:
       //timer010 = 0.09; //for screenshot!
       glPushMatrix();
       if (shader) shader->begin();
-      glRotatef(timer010 * 360, 0.5, 1.0f, 0.1f);
-      miMalla->DibujarMalla();
+      //glRotatef(timer010 * 360, 0.5, 1.0f, 0.1f);
+      glPushMatrix();
+      glTranslatef(-1.0, 0, 0.0);
+      mallas[0]->DibujarMalla();
+      glPopMatrix();
+
+      glPushMatrix();
+        glTranslatef(1.0, 0, 0.0);
+        mallas[1]->DibujarMalla();
+      glPopMatrix();
       //glmDraw(objmodel_ptr, GLM_SMOOTH | GLM_MATERIAL);
          
          //glutSolidTeapot(0.5);
@@ -137,7 +145,8 @@ public:
         }
 
         //Entrada1 = ClassEntrada();
-        miMalla = new AbrirMalla("./mallas/bunny.obj");
+        mallas[0] = new AbrirMalla("./mallas/untitled.obj");
+        mallas[1] = new AbrirMalla("./mallas/dragon.obj");
 
         /*objmodel_ptr = NULL;
 
