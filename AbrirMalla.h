@@ -8,5 +8,6 @@ public:
 	GLMmodel* objmodel_ptr;
 	AbrirMalla(char*);
 	void DibujarMalla();
+	~AbrirMalla();
 };
 

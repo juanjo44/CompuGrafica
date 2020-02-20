@@ -13,6 +13,10 @@ AbrirMalla::AbrirMalla(char *malla) {
         glmVertexNormals(objmodel_ptr, 90.0);
     }
 }
+
+AbrirMalla::~AbrirMalla() {
+    objmodel_ptr = NULL;
+}
 void AbrirMalla::DibujarMalla() {
 
     glmDraw(objmodel_ptr, GLM_SMOOTH | GLM_MATERIAL);
