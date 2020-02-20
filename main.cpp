@@ -9,6 +9,9 @@
 #include <iostream>
 #include "glsl.h"
 #include <time.h>
+#include "ClassArbol.h"
+#include "ClassEntrada.h"
+#define NUM_ARBOLES 2
 
 //-----------------------------------------------------------------------------
 
@@ -22,6 +25,8 @@ protected:
    clock_t time0,time1;
    float timer010;  // timer counting 0->1->0
    bool bUp;        // flag if counting up or down.
+   ClassArbol Jardin[NUM_ARBOLES];
+   ClassEntrada Entrada1;
 
 
 public:
@@ -37,7 +42,11 @@ public:
          //glRotatef(timer010*360, 0.5, 1.0f, 0.1f);
          //glutSolidTeapot(0.5);
          //glutSolidCube(0.5);
-      glTranslatef(0.0, 0.0, -3);
+
+      //Jardin[0].DibujarArbol(0.0f, 0.0f, 0.0f);
+      //Jardin[1].DibujarArbol(-0.5f, 0.0f, -0.5f);
+      Entrada1.DibujarEntrada(0.0f, 0.0f, 0.0f);
+      /*glTranslatef(0.0, 0.0, -3);
 
       glBegin(GL_TRIANGLES);
       glVertex3f(-0.5, 0.0, 0.0);
@@ -99,7 +108,7 @@ public:
 
          glTranslatef(1, -1.0, 0.0);
          glutSolidCube(0.5);
-         glPopMatrix();
+         glPopMatrix();*/
 
       if (shader) shader->end();
       glutSwapBuffers();
@@ -114,8 +123,13 @@ public:
 
 	// When OnInit is called, a render context (in this case GLUT-Window) 
 	// is already available!
-	virtual void OnInit()
-	{
+    virtual void OnInit()
+    {
+        for (int i = 0; i < NUM_ARBOLES; i++) {
+            Jardin[i] = ClassArbol();
+        }
+
+        Entrada1 = ClassEntrada();
 		glClearColor(0.5f, 0.5f, 1.0f, 0.0f);
 		glShadeModel(GL_SMOOTH);
 		glEnable(GL_DEPTH_TEST);
