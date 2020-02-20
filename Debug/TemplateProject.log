@@ -1,9 +1,4 @@
 ﻿cl : línea de comandos warning D9035: La opción 'Gm' está desusada y se quitará en próximas versiones
   main.cpp
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(56,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(63,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(79,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(84,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(91,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\juanjo44\Downloads\GLSL_Lighting\main.cpp(98,1): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-  TemplateProject.vcxproj -> C:\Users\juanjo44\Downloads\GLSL_Lighting\Debug\TemplateProject.exe
+AbrirMalla.obj : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificaci¾n '/SAFESEH'
+  TemplateProject.vcxproj -> C:\Users\juanjo44\Desktop\CompuGrafica\Debug\TemplateProject.exe

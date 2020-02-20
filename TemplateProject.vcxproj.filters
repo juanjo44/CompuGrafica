@@ -28,6 +28,9 @@
     <Filter Include="cwc\source">
       <UniqueIdentifier>{78f27cf6-d48d-4577-a96b-104bf30b5a24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GLM">
+      <UniqueIdentifier>{408d358e-5630-48c2-848f-bf98f9e72380}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glew\include\Gl\glew.h">
@@ -69,6 +72,12 @@
     <ClInclude Include="cwc\include\glWindow.h">
       <Filter>cwc\include</Filter>
     </ClInclude>
+    <ClInclude Include="glm\glm.h">
+      <Filter>GLM</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassArbol.h" />
+    <ClInclude Include="ClassEntrada.h" />
+    <ClInclude Include="AbrirMalla.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glew\source\glew.c">
@@ -153,6 +162,12 @@
       <Filter>cwc\source</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="glm\glm.cpp">
+      <Filter>GLM</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassArbol.cpp" />
+    <ClCompile Include="ClassEntrada.cpp" />
+    <ClCompile Include="AbrirMalla.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut\source\freeglutdll.def">

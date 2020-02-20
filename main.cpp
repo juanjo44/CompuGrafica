@@ -11,6 +11,7 @@
 #include <time.h>
 #include "ClassArbol.h"
 #include "ClassEntrada.h"
+#include "AbrirMalla.h"
 #define NUM_ARBOLES 2
 
 //-----------------------------------------------------------------------------
@@ -27,6 +28,9 @@ protected:
    bool bUp;        // flag if counting up or down.
    ClassArbol Jardin[NUM_ARBOLES];
    ClassEntrada Entrada1;
+   //GLMmodel* objmodel_ptr;
+   AbrirMalla *miMalla;
+
 
 
 public:
@@ -39,13 +43,16 @@ public:
       //timer010 = 0.09; //for screenshot!
       glPushMatrix();
       if (shader) shader->begin();
-         //glRotatef(timer010*360, 0.5, 1.0f, 0.1f);
+      glRotatef(timer010 * 360, 0.5, 1.0f, 0.1f);
+      miMalla->DibujarMalla();
+      //glmDraw(objmodel_ptr, GLM_SMOOTH | GLM_MATERIAL);
+         
          //glutSolidTeapot(0.5);
          //glutSolidCube(0.5);
 
       //Jardin[0].DibujarArbol(0.0f, 0.0f, 0.0f);
       //Jardin[1].DibujarArbol(-0.5f, 0.0f, -0.5f);
-      Entrada1.DibujarEntrada(0.0f, 0.0f, 0.0f);
+      //Entrada1.DibujarEntrada(0.0f, 0.0f, 0.0f);
       /*glTranslatef(0.0, 0.0, -3);
 
       glBegin(GL_TRIANGLES);
@@ -129,7 +136,21 @@ public:
             Jardin[i] = ClassArbol();
         }
 
-        Entrada1 = ClassEntrada();
+        //Entrada1 = ClassEntrada();
+        miMalla = new AbrirMalla("./mallas/bunny.obj");
+
+        /*objmodel_ptr = NULL;
+
+        if (!objmodel_ptr)
+        {
+            objmodel_ptr = glmReadOBJ("./mallas/buddha.obj");
+            if (!objmodel_ptr)
+                exit(0);
+
+            glmUnitize(objmodel_ptr);
+            glmFacetNormals(objmodel_ptr);
+            glmVertexNormals(objmodel_ptr, 90.0);
+        }*/
 		glClearColor(0.5f, 0.5f, 1.0f, 0.0f);
 		glShadeModel(GL_SMOOTH);
 		glEnable(GL_DEPTH_TEST);

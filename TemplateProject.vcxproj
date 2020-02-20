@@ -89,6 +89,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbrirMalla.h" />
+    <ClInclude Include="ClassArbol.h" />
+    <ClInclude Include="ClassEntrada.h" />
     <ClInclude Include="cwc\include\glApplication.h" />
     <ClInclude Include="cwc\include\glsl.h" />
     <ClInclude Include="cwc\include\glutwindow.h" />
@@ -102,8 +105,12 @@
     <ClInclude Include="glew\include\Gl\glew.h" />
     <ClInclude Include="glew\include\Gl\glxew.h" />
     <ClInclude Include="glew\include\Gl\wglew.h" />
+    <ClInclude Include="glm\glm.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbrirMalla.cpp" />
+    <ClCompile Include="ClassArbol.cpp" />
+    <ClCompile Include="ClassEntrada.cpp" />
     <ClCompile Include="cwc\source\glApplication.cpp" />
     <ClCompile Include="cwc\source\glsl.cpp" />
     <ClCompile Include="cwc\source\glutwindow.cpp" />
@@ -131,6 +138,7 @@
     <ClCompile Include="freeglut\source\freeglut_videoresize.c" />
     <ClCompile Include="freeglut\source\freeglut_window.c" />
     <ClCompile Include="glew\source\glew.c" />
+    <ClCompile Include="glm\glm.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
